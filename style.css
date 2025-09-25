@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "myFont";
+    src: url(./Fonts/LibreBaskerville-Regular.ttf);
+}
+@font-face {
+    font-family: "myFont2";
+    src: url(./Fonts/LibreBaskerville-Italic.ttf);
+}
+@font-face {
+    font-family: "myFont3";
+    src: url(./Fonts/Poppins-Thin.ttf);
+}
+
+.navbar {
+    height: 90px !important;
+    font-family: "myFont3" !important;
+}
+
+.font {
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+    color: #F8F8F6 !important;
+}
+
+.text{
+    font-size: 10px !important;
+}
+
+.padd-vert{
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+.text2{
+    font-size: 80px !important;
+    font-family: "myFont" !important;
+}
+
+.italic{
+    font-family: "myFont2" !important;
+}
+.margin-b{
+    padding-bottom: 200px !important;
+}
+
+.minusMargin{
+    margin-top: 0px !important;
+}
+
+.letter{
+    letter-spacing: 5px !important;
+    font-family: "myFont3" !important;
+     font-size: 15px !important;
+}
+
+.font3{
+    font-family: "myFont3" !important;
+}
+
+.f-size{
+    font-size: 12px !important;
+    line-height: 25px !important;
+    letter-spacing: 1px !important;
+    font-weight: 200 !important;
+}
+
+.setcolor{
+    color: #313232 !important;
+    font-family: "myFont" !important;
+}
+
+.linegap{
+    text-underline-offset: 8px !important;
+}
+
+.sm-text{
+    font-size: 12.5px !important;
+}
+
+.bg-color{
+    background-color: #F9F4EF !important;
+}
+
+.background-color{
+    background-color: #E3E7DC !important    ;
+}
+
+.bg-btn{
+background-color: #0e2914 !important; 
+}
+
+.seccolor{
+    background-color: #E7E2EA !important;
+}
+
+.footerBackground{
+    background-color: #263E2B !important;
+}
+
+.row{
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.view-circle {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #2A4931;
+  border-radius: 50%;
+  position: relative;
+  left: 28px;           
+  z-index: 0;
+  background: white;    
+  transition: all 0.3s ease;
+}
+
+.view-circle::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.view-text {
+  font-size: 14px;
+  font-weight: 600px;
+  margin-left: -10px;
+  z-index: 1;
+  position: relative;
+
+}
+
+.hover:hover{
+background-color:#0e2914 !important;
+color: white !important;
+}
+
+/* MEDIA QUERY */
+
+
+/* Sirf lg aur usse upar margin apply ho */
+@media (min-width: 992px) {
+  .minusMargin {
+      margin-top: -150px !important;
+  }
+}
