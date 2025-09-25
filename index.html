@@ -11,25 +11,69 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg position-fixed shadow-sm z-3 w-100  d-none d-lg-flex">
-  <div class="container-fluid ms-2 me-3">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-lg-0">
-        <li class="nav-item"><a class="nav-link fw-bold text-white font" href="#">HOME</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font" href="#">SHOP</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font" href="#">PRODUCT</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font" href="#">BLOG</a></li>
-        <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font" href="#">FEATURED</a></li>
-      </ul>
-      
-      <a class="navbar-brand ms-5 ps-5" href="#">
-        <img width="85" height="26" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/logo-white.png?crop=center&height=125&v=1727749201&width=400" alt="logo">
+  <nav class="navbar navbar-expand-lg position-fixed shadow-sm z-3 w-100  d-none d-lg-flex">
+    <div class="container-fluid ms-2 me-3">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-lg-0">
+          <li class="nav-item"><a class="nav-link fw-bold text-white font animate" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font animate" href="#">SHOP</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font animate" href="#">PRODUCT</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font animate" href="#">BLOG</a></li>
+          <li class="nav-item"><a class="nav-link fw-bold ms-4 text-white font animate" href="#">FEATURED</a></li>
+        </ul>
+
+        <a class="navbar-brand ms-5 ps-5 animate" href="#">
+          <img width="85" height="26"
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/logo-white.png?crop=center&height=125&v=1727749201&width=400"
+            alt="logo">
+        </a>
+        <!-- Icons -->
+        <div class="d-flex align-items-center gap-3 ms-auto ">
+          <!-- hidden on xs -->
+          <i class="fa-solid fa-magnifying-glass fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
+          <i class="fa-regular fa-user fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
+
+          <!-- always visible -->
+          <span class="position-relative">
+            <i class="fa-regular fa-heart fs-4" style="color: #ffffff;"></i>
+            <span
+              class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </span>
+
+          <span class="position-relative">
+            <i class="fa-solid fa-dolly fa-flip-horizontal fs-4" style="color: #ffffff;"></i>
+            <span
+              class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Navbar -->
+  <nav class="navbar position-fixed shadow-sm z-3 w-100 d-lg-none">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <!-- Left: Hamburger -->
+      <a class="btn p-0 me-2" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
+        aria-controls="offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
       </a>
-      <!-- Icons -->
-      <div class="d-flex align-items-center gap-3 ms-auto">
+
+      <!-- Center: Logo -->
+      <a class="navbar-brand mx-auto" href="#">
+        <img width="85" height="26"
+          src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/logo-white.png?crop=center&height=125&v=1727749201&width=400"
+          alt="logo">
+      </a>
+
+      <!-- Right: Icons -->
+      <div class="d-flex align-items-center gap-3">
         <!-- hidden on xs -->
         <i class="fa-solid fa-magnifying-glass fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
         <i class="fa-regular fa-user fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
@@ -37,201 +81,189 @@
         <!-- always visible -->
         <span class="position-relative">
           <i class="fa-regular fa-heart fs-4" style="color: #ffffff;"></i>
-          <span class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          <span
+            class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
         </span>
 
         <span class="position-relative">
           <i class="fa-solid fa-dolly fa-flip-horizontal fs-4" style="color: #ffffff;"></i>
-          <span class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+          <span
+            class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
         </span>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Mobile Navbar -->
-<nav class="navbar position-fixed shadow-sm z-3 w-100 d-lg-none">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-
-    <!-- Left: Hamburger -->
-    <a class="btn p-0 me-2" data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button"
-      aria-controls="offcanvasMenu">
-      <span class="navbar-toggler-icon"></span>
-    </a>
-
-    <!-- Center: Logo -->
-    <a class="navbar-brand mx-auto" href="#">
-      <img width="85" height="26"
-        src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/logo-white.png?crop=center&height=125&v=1727749201&width=400"
-        alt="logo">
-    </a>
-
-    <!-- Right: Icons -->
-    <div class="d-flex align-items-center gap-3">
-      <!-- hidden on xs -->
-      <i class="fa-solid fa-magnifying-glass fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
-      <i class="fa-regular fa-user fs-5 d-none d-sm-block" style="color: #ffffff;"></i>
-
-      <!-- always visible -->
-      <span class="position-relative">
-        <i class="fa-regular fa-heart fs-4" style="color: #ffffff;"></i>
-        <span class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-      </span>
-
-      <span class="position-relative">
-        <i class="fa-solid fa-dolly fa-flip-horizontal fs-4" style="color: #ffffff;"></i>
-        <span class="position-absolute text px-1 top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
-      </span>
+  <!-- Offcanvas Menu for Mobile -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title font3 fs-1 fw-bold" id="offcanvasMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a
+            class="nav-link fw-bold font3" href="#">HOME</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#999999">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          </svg></li>
+        <hr class="mt-0">
+        <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a
+            class="nav-link fw-bold font3" href="#">SHOP</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#999999">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          </svg></li>
+        <hr class="mt-0">
+        <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a
+            class="nav-link fw-bold font3" href="#">PRODUCT</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#999999">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          </svg></li>
+        <hr class="mt-0">
+        <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a
+            class="nav-link fw-bold font3" href="#">BLOG</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#999999">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          </svg></li>
+        <hr class="mt-0">
+        <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a
+            class="nav-link fw-bold font3" href="#">FEATURED</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+            viewBox="0 -960 960 960" width="24px" fill="#999999">
+            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
+          </svg></li>
+        <hr class="mt-0">
+      </ul>
     </div>
   </div>
-</nav>
-
-<!-- Offcanvas Menu for Mobile -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title font3 fs-1 fw-bold" id="offcanvasMenuLabel">Menu</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="navbar-nav">
-      <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a class="nav-link fw-bold font3" href="#">HOME</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></li>
-      <hr class="mt-0">
-      <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a class="nav-link fw-bold font3" href="#">SHOP</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></li>
-      <hr class="mt-0">
-      <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a class="nav-link fw-bold font3" href="#">PRODUCT</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></li>
-      <hr class="mt-0">
-      <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a class="nav-link fw-bold font3" href="#">BLOG</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></li>
-      <hr class="mt-0">
-      <li class="nav-item d-flex justify-content-between align-items-center hover ps-2"><a class="nav-link fw-bold font3" href="#">FEATURED</a> <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#999999"><path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z"/></svg></li>
-      <hr class="mt-0">
-    </ul>
-  </div>
-</div>
   <!-- nav close  -->
 
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
 
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-      <div class="d-flex justify-content-center align-items-center">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-1.jpg?v=1727765932" class="w-100" alt="...">
-      </div>
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-1.jpg?v=1727765932" class="w-100"
+            alt="...">
+        </div>
 
-      <!-- Desktop Caption (Overlay) -->
-    <div class="carousel-caption margin-b d-none d-lg-block">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="text2"> Plants <span class="italic">made easy </span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them <br>
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-4 mt-4 d-flex justify-content-center">
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
+        <!-- Desktop Caption (Overlay) -->
+        <div class="carousel-caption margin-b d-none d-lg-block">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="text2"> Plants <span class="italic">made easy </span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them <br>
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-4 mt-4 d-flex justify-content-center">
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
+          </div>
+        </div>
+
+        <!-- Mobile Caption (Below Image) -->
+        <div class="d-block d-lg-none text-center p-3">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="fs-1"> Plants <span class="italic">made easy </span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
+          </div>
         </div>
       </div>
 
-      <!-- Mobile Caption (Below Image) -->
-     <div class="d-block d-lg-none text-center p-3">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="fs-1"> Plants <span class="italic">made easy </span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center align-items-center">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-2.jpg?v=1727765932" class="w-100"
+            alt="...">
+        </div>
+
+        <div class="carousel-caption margin-b d-none d-lg-block">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="text2">Make People <span class="italic">Merry</span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them <br>
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-4 mt-4 d-flex justify-content-center">
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
+          </div>
+        </div>
+
+        <div class="d-block d-lg-none text-center p-3">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="fs-1">Make People <span class="italic">Merry</span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
+          </div>
         </div>
       </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center align-items-center">
+          <img
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-3_87c2a061-1b63-41f1-9ab1-9762598d377a.jpg?v=1727765984"
+            class="w-100" alt="...">
+        </div>
+
+        <div class="carousel-caption margin-b d-none d-lg-block">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="text2">Gifts We <span class="italic">Love</span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them <br>
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-4 mt-4 d-flex justify-content-center">
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
+            <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
+          </div>
+        </div>
+
+        <div class="d-block d-lg-none text-center p-3">
+          <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
+          <h2 class="fs-1">Gifts We <span class="italic">Love</span></h2>
+          <p class="font3 fw-bold f-size">
+            Patch helps you discover the best plants for your space, delivers them
+            to your door and helps you look after them.
+          </p>
+          <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
+            <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <!-- Slide 2 -->
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center align-items-center">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-2.jpg?v=1727765932" class="w-100" alt="...">
-      </div>
-
-    <div class="carousel-caption margin-b d-none d-lg-block">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="text2">Make People <span class="italic">Merry</span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them <br>
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-4 mt-4 d-flex justify-content-center">
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
-        </div>
-      </div>
-
-      <div class="d-block d-lg-none text-center p-3">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="fs-1">Make People <span class="italic">Merry</span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Slide 3 -->
-    <div class="carousel-item">
-      <div class="d-flex justify-content-center align-items-center">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/slider-1-3_87c2a061-1b63-41f1-9ab1-9762598d377a.jpg?v=1727765984" class="w-100" alt="...">
-      </div>
-
-      <div class="carousel-caption margin-b d-none d-lg-block">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="text2">Gifts We <span class="italic">Love</span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them <br>
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-4 mt-4 d-flex justify-content-center">
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Indoor</button>
-          <button class="px-5 py-3 bg-white border-0 text-black">Shop Outdoor</button>
-        </div>
-      </div>
-
-      <div class="d-block d-lg-none text-center p-3">
-        <p class="letter fw-bold pb-0 mb-0">SALE UP TO 30% OFF</p>
-        <h2 class="fs-1">Gifts We <span class="italic">Love</span></h2>
-        <p class="font3 fw-bold f-size">
-          Patch helps you discover the best plants for your space, delivers them
-          to your door and helps you look after them.
-        </p>
-        <div class="gap-2 mt-3 d-flex justify-content-center flex-wrap">
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Indoor</button>
-          <button class="px-4 py-2 bg-dark border-0 text-white">Shop Outdoor</button>
-        </div>
-      </div>
-    </div>
-
   </div>
-</div>
 
-   <div class="row gap-3 bg-color justify-content-center">
+
+  <div class="row gap-3 bg-color justify-content-center">
+
     <div class="col-12 col-sm-12 col-md-12 card border-0 px-0 bg-color minusMargin col-lg-4 ">
       <div>
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-1.jpg?v=1727768126"
-          class="rounded-0 card-img img-fluid" alt="...">
-        <div class="card-img-overlay d-flex justify-content-end mb-5 ms-4 align-items-start flex-column ">
-          <h4 class="card-title setcolor">New Arrivals</h4>
-          <h6 class="text-decoration-underline linegap">Shop Now</h6>
-        </div>
+        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-1.jpg?v=1727768126" <div
+          class="card-img-overlay d-flex justify-content-end mb-5 ms-4 align-items-start flex-column ">
+        <h4 class="card-title setcolor">New Arrivals</h4>
+        <h6 class="text-decoration-underline linegap">Shop Now</h6>
       </div>
     </div>
 
     <div class="col-12 col-sm-12 col-md-12  card border-0 px-0 minusMargin col-lg-3 bg-color">
       <div>
         <img height="279" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-2.jpg?v=1727768127"
-          class="rounded-0 card-img img-fluid" alt="...">
+          class="rounded-0 card-img img-fluid " alt="...">
         <div class="card-img-overlay d-flex justify-content-end mb-4 ms-4 align-items-center flex-column ">
           <h4 class="card-title setcolor mb-1">Gift Green</h4>
           <h6 class="text-decoration-underline  linegap">Shop Now</h6>
@@ -242,16 +274,16 @@
     <div class="col-12 col-sm-12 col-md-12  card border-0 px-0 minusMargin col-lg-4 bg-color">
       <div>
         <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-3.jpg?v=1727768127"
-          class="rounded-0 card-img img-fluid" alt="...">
+          class="rounded-0 card-img img-fluid " alt="...">
         <div class="card-img-overlay d-flex justify-content-end mb-5 ms-4 align-items-start flex-column ">
           <h4 class="card-title setcolor">Home Grown</h4>
           <h6 class="text-decoration-underline linegap">Shop Now</h6>
         </div>
       </div>
     </div>
-  </div> 
+  </div>
 
- <section class="row bg-color" style="padding-top: 8%; padding-bottom: 8%;">
+  <section class="row bg-color" style="padding-top: 8%; padding-bottom: 8%;">
     <div class="col-12 col-sm-12 col-md-7 col-lg-7 ">
       <div class=" ps-4">
         <div>
@@ -301,16 +333,18 @@
 
     <div class="col-12 col-sm-12 col-md-5 col-lg-5 mx-sm-auto position-relative d-flex ">
       <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/policy-image-3.png?v=1727772240"
-        class="position-absolute img-fluid mx-auto" style="top:15%; left:2%; width: 80%; height: 82%;" alt="shape" />
+        class="position-absolute img-fluid mx-auto ring" style="top:15%; left:2%; width: 80%; height: 82%;"
+        alt="shape" />
       <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/policy-image-2.png?v=1727772240"
-        class="position-absolute img-fluid mx-auto" style="top:8%; left:1%; width: 78%; height: 96%; " alt="shape2" />
+        class="position-absolute img-fluid mx-auto ring" style="top:8%; left:1%; width: 78%; height: 96%; "
+        alt="shape2" />
       <img width="500" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/policy-image-1.webp?v=1727772240"
         class="img-fluid mx-auto" alt="main-plant" />
     </div>
     </div>
-  </section> 
+  </section>
 
-   <section>
+  <section>
     <div class="text-center my-5" style="font-family: 'myFont';">
       <h3>
         Top <span style="font-family: 'myFont2';"> Rating </span> <span class="text-secondary">/</span>
@@ -318,10 +352,14 @@
       </h3>
     </div>
 
-     <div class="d-flex flex-wrap gap-4 justify-content-center">
+    <div class="d-flex flex-wrap gap-4 justify-content-center">
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/11-8_540x.jpg?v=1727684850"
-          class="card-img-top rounded-0" alt="...">
+        <div class=" product-card">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/11-8_540x.jpg?v=1727684850"
+            class="card-img-top rounded-0 main-img" alt="...">
+
+          <img src="./images/plant1.png" class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -345,11 +383,16 @@
       </div>
 
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <div class="sm-text text-center text-white"
-          style="width: 45px; height: 18px; font-weight: 600; background-color: red; position: absolute; top: 8px; left: 8px;">
-          -43%</div>
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-6_540x.jpg?v=1727684836"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <div class="sm-text text-center text-white"
+            style="width: 45px; height: 18px; font-weight: 600; background-color: red; position: absolute; top: 8px; left: 8px;">
+            -43%</div>
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-6_540x.jpg?v=1727684836"
+            class="card-img-top rounded-0 main-img" alt="...">
+
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-6_540x.jpg?v=1727684836"
+            class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -377,8 +420,13 @@
         <div class="sm-text text-center text-white"
           style="width: 45px; height: 18px; font-weight: 600; background-color: red; position: absolute; top: 8px; left: 8px;">
           -33%</div>
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-3_540x.jpg?v=1727684820"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img src="./images/plant2.png" class="card-img-top rounded-0 main-img" alt="...">
+
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-3_540x.jpg?v=1727684820"
+            class="card-img-top rounded-0 hover-img" alt="...">
+
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -403,8 +451,11 @@
       </div>
 
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-5_540x.jpg?v=1727684825"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/10-5_540x.jpg?v=1727684825"
+            class="card-img-top rounded-0 main-img" alt="...">
+          <img src="./images/plant3.png" class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -425,13 +476,16 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
 
     <div class="d-flex flex-wrap gap-4 justify-content-center">
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img
-          src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/16-1_5f1bbfe2-f7bc-4b45-a536-57fd4bd03363_540x.jpg?v=1727684845"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/16-1_5f1bbfe2-f7bc-4b45-a536-57fd4bd03363_540x.jpg?v=1727684845"
+            class="card-img-top rounded-0 main-img" alt="...">
+          <img src="./images/plant4.png" class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -455,9 +509,13 @@
       </div>
 
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img
-          src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/7_180x.jpg?v=1727684830%20180w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7_360x.jpg?v=1727684830%20360w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7_540x.jpg?v=1727684830%20540w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7.jpg?v=1727684830%20720w"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/7_180x.jpg?v=1727684830%20180w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7_360x.jpg?v=1727684830%20360w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7_540x.jpg?v=1727684830%20540w%20,//wpbingo-flacio.myshopify.com/cdn/shop/files/7.jpg?v=1727684830%20720w"
+            class="card-img-top rounded-0 main-img" alt="...">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/8_540x.jpg?v=1727684830"
+            class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -473,9 +531,14 @@
       </div>
 
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img
-          src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/4_e38424b6-c524-41ed-9909-c9060fd972c1_540x.jpg?v=1727684815"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/4_e38424b6-c524-41ed-9909-c9060fd972c1_540x.jpg?v=1727684815"
+            class="card-img-top rounded-0 main-img" alt="...">
+          <img
+            src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/4_e38424b6-c524-41ed-9909-c9060fd972c1_540x.jpg?v=1727684815"
+            class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -498,8 +561,11 @@
       </div>
 
       <div class="card rounded-0 border-0" style="width: 17rem;">
-        <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/15-5_540x.jpg?v=1727684840"
-          class="card-img-top rounded-0" alt="...">
+        <div class="product-card">
+          <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/15-5_540x.jpg?v=1727684840"
+            class="card-img-top rounded-0 main-img" alt="...">
+          <img src="./images/plant5.png" class="card-img-top rounded-0 hover-img" alt="...">
+        </div>
         <div class="card-body pt-2 ps-0">
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
           <i class="fa-solid fa-star fa-2xs" style="color: #8a8a8a;"></i>
@@ -522,13 +588,13 @@
       </div>
     </div>
 
-<div class="text-center d-flex justify-content-center align-items-center gap-2 my-5 position-relative">
-  <div class="view-circle"></div>
-  <span class="view-text">View more</span>
-  <i class="fa-solid fa-arrow-right ms-1 mt-1" style="color:#2A4931;"></i>
-</div>
+    <div class="text-center headShake d-flex justify-content-center align-items-center gap-2 my-5 position-relative">
+      <div class="view-circle"></div>
+      <span class="view-text">View more</span>
+      <i class="fa-solid fa-arrow-right ms-1 mt-1" style="color:#2A4931;"></i>
+    </div>
 
-  </section> 
+  </section>
 
   <section class="background-color d-flex justify-content-center align-items-center">
     <div class="my-5 pt-5  d-flex justify-content-center align-items-center flex-column">
@@ -552,12 +618,14 @@
 
   <section class="ps-4 row pe-4">
     <div class="col-12 col-sm-12 col-md-6 col-lg-6 mx-auto d-flex flex-column justify-content-center align-items-start">
-      <div style="position: relative; top: 55px; left: 65px;"> <img
+      <div style="position: relative; top: 55px; left: 65px;"> <img id="circleRotate"
           src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/text-rotate.png?v=1727860890" alt=""></div>
-      <img height="500" class="img-fluid" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-4.jpg?v=1727860877" alt="">
+      <img height="500" class="img-fluid"
+        src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-4.jpg?v=1727860877" alt="">
     </div>
 
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 mx-auto  d-flex flex-column justify-content-center pt-5 align-items-start">
+    <div
+      class="col-12 col-sm-12 col-md-6 col-lg-6 mx-auto  d-flex flex-column justify-content-center pt-5 align-items-start">
       <p class="fs-1" style="font-family: 'myFont';">Plants for <span style="font-family: 'myFont2';">offices</span>
       </p>
       <p class="text-secondary" style="font: 'myFont';">Praesent egestas tristique nibh. Sed mollis, eros et ultrices
@@ -569,9 +637,10 @@
   </section>
 
   <section class="ps-4 row pe-4">
-    <div class="col-12 col-sm-12 col-md-6 mx-auto col-lg-6 d-flex flex-column justify-content-center pt-5 align-items-start">
-      <p class="fs-1" style="font-family: 'myFont';">Sets for all <span
-          style="font-family: 'myFont2';">styles</span></p>
+    <div
+      class="col-12 col-sm-12 col-md-6 mx-auto col-lg-6 d-flex flex-column justify-content-center pt-5 align-items-start">
+      <p class="fs-1" style="font-family: 'myFont';">Sets for all <span style="font-family: 'myFont2';">styles</span>
+      </p>
       <p class="text-secondary" style="font: 'myFont';">Praesent egestas tristique nibh. Sed mollis, eros et ultrices
         tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Fusce convallis metus id felis luctus
         adipiscing. Integer tincidunt. Etiam imperdiet imperdiet orci</p>
@@ -581,8 +650,10 @@
 
     <div class="col-12 col-sm-12 col-md-6 mx-auto col-lg-6">
       <div class="d-flex justify-content-end " style="position: relative; top: 55px; right: 55px;"> <img
-          src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/text-rotate.png?v=1727860890" alt=""></div>
-      <img height="500" class="img-fluid" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-5.jpg?v=1727860876" alt="">
+          id="circleRotate" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/text-rotate.png?v=1727860890"
+          alt=""></div>
+      <img height="500" class="img-fluid"
+        src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/banner-5.jpg?v=1727860876" alt="">
     </div>
   </section>
 
@@ -618,19 +689,19 @@
     <div class="row  mx-4 justify-content-center gap-3 my-5">
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 card border-0 rounded-0" style="width: 18rem;">
         <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/ig-1.jpg?v=1727923475"
-          class="card-img-top rounded-0" alt="...">
+          class="card-img-top rounded-0 smZoom" alt="...">
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 card border-0 rounded-0" style="width: 18rem;">
         <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/ig-2.jpg?v=1727923475"
-          class="card-img-top rounded-0" alt="...">
+          class="card-img-top rounded-0 smZoom" alt="...">
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 card border-0 rounded-0" style="width: 18rem;">
         <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/ig-3.jpg?v=1727923475"
-          class="card-img-top rounded-0" alt="...">
+          class="card-img-top rounded-0 smZoom" alt="...">
       </div>
       <div class="col-12 col-sm-6 col-md-6 col-lg-3 card border-0 rounded-0" style="width: 18rem;">
         <img src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/ig-4.jpg?v=1727923475"
-          class="card-img-top rounded-0" alt="...">
+          class="card-img-top rounded-0 smZoom" alt="...">
       </div>
     </div>
     <hr>
@@ -690,7 +761,8 @@
         <li>Our Guarantee</li>
       </ul>
       <div class="d-flex">
-        <img class="img-fluid" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/payment.png?v=1727924980" alt="">
+        <img class="img-fluid" src="https://wpbingo-flacio.myshopify.com/cdn/shop/files/payment.png?v=1727924980"
+          alt="">
       </div>
     </div>
 
@@ -755,7 +827,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>

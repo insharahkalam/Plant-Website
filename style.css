@@ -153,7 +153,61 @@ color: white !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.animate:hover{
+     animation: headShake 2s !important;
+}
 
+.circleRotate{
+    animation: rotateIn 3s infinite !important;
+}
+
+.headShake:hover{
+    animation: headShake 3s;
+}
+.product-card {
+  position: relative;
+  width: 273px; /* apne design ke hisaab se */
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+/* Hover wali image (upar se aayegi) */
+.product-card .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: scale(1.5); /* thoda zoomed */
+}
+
+/* Hover effect */
+.product-card:hover .hover-img {
+  opacity: 1;
+  transform: scale(1.1); /* zoom-in se normal */
+}
+
+.product-card:hover .main-img {
+  opacity: 0;
+  transform: scale(1.09); /* thoda zoom-out */
+}
+
+.smZoom{
+      transition: transform 0.4s ease;
+}
+
+.smZoom:hover{
+     transform: scale(1.05);
+     filter: grayscale(50%) !important;
+}
+ 
+.ring{
+    animation: pulse 2s infinite;
+}
 
 
 /* MEDIA QUERY */
