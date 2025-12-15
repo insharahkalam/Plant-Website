@@ -138,6 +138,9 @@ background-color: #0e2914 !important;
 background-color:#0e2914 !important;
 color: white !important;
 }
+.hover1{
+  background-color:#0e2914 !important;
+}
 
 .navbar {
   background: transparent;
@@ -281,4 +284,19 @@ color: white !important;
   .d-block.d-lg-none {
     padding: 5px !important;
   }
+}
+
+.card1{
+   transition: all 0.3s ease-in-out; 
+    cursor: pointer;
+}
+
+.card1:hover{
+  transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #f8f9fa; 
+}
+
+.bg-btn-hover:hover{
+  background-color: #263E2B !important;
 }
